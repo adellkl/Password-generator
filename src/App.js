@@ -35,7 +35,7 @@ function App() {
       }
       setMotDePasse(nouveauMotDePasse);
       setChargement(false);
-    }, 2000); // Simuler le temps de chargement
+    }, 2000); 
   };
 
   const copierDansLePressePapier = () => {
