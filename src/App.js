@@ -97,7 +97,7 @@ function App() {
           </button>
           {chargement ? (
             <div className="mt-4 text-center">
-              <div className="spinner"></div>
+              <div className="spinner  ml-36 mt-4"></div>
             </div>
           ) : (
             motDePasse && (
