@@ -2,8 +2,6 @@
 import React, { useState } from 'react';
 import './App.css';
 import { FaCopy } from 'react-icons/fa';
-import Particles from 'react-tsparticles';
-import { loadFull } from 'tsparticles';
 import { Helmet } from 'react-helmet';
 
 function App() {
@@ -63,19 +61,19 @@ function App() {
         <meta name="twitter:image" content="https://votresiteweb.com/twitter-image.jpg" />
       </Helmet>
       <div className="relative z-10">
-        <h1 className="text-5xl font-bold text-white mb-8">Pashword</h1>
+        <h1 className="text-5xl font-bold text-white mb-8 ">-- MDP --</h1>
         <div className="bg-white p-8 rounded-lg shadow-md w-96">
           <div className="mb-4">
             <label className="block text-gray-700">Site web</label>
-            <input type="text" className="mt-1 p-2 w-full border rounded" placeholder="Exemple : reddit.com" />
+            <input type="text" className="mt-1 p-2 w-full border rounded" placeholder="Exemple : nike.com" />
           </div>
           <div className="mb-4">
             <label className="block text-gray-700">Nom d'utilisateur</label>
-            <input type="text" className="mt-1 p-2 w-full border rounded" placeholder="Exemple : nayam_amarsh" />
+            <input type="text" className="mt-1 p-2 w-full border rounded" placeholder="Exemple : adel_loukal" />
           </div>
           <div className="mb-4">
             <label className="block text-gray-700">Clé secrète</label>
-            <input type="password" className="mt-1 p-2 w-full border rounded" placeholder="Exemple : JimmyNeutron10$" />
+            <input type="password" className="mt-1 p-2 w-full border rounded" placeholder="Exemple : Adelbg9210$" />
           </div>
           <div className="mb-4">
             <label className="block text-gray-700">Complexité du mot de passe</label>
@@ -101,7 +99,7 @@ function App() {
             </div>
           ) : (
             motDePasse && (
-              <div className="mt-4 bg-gray-100 p-2 rounded flex items-center justify-between">
+              <div className="mt-8 bg-gray-100 p-2 rounded flex items-center justify-between">
                 <p className="text-gray-700 font-mono text-lg">{motDePasse}</p>
                 <button 
                   onClick={copierDansLePressePapier}
