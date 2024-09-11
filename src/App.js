@@ -46,18 +46,18 @@ function App() {
   return (
     <div className="min-h-screen flex flex-col items-center justify-center relative">
       <Helmet>
-        <title>Pashword - Générateur de mots de passe</title>
-        <meta name="description" content="Pashword est un générateur de mots de passe sécurisés qui crée des mots de passe complexes pour protéger vos comptes." />
+        <title>mdp - Générateur de mots de passe</title>
+        <meta name="description" content="mdp est un générateur de mots de passe sécurisés qui crée des mots de passe complexes pour protéger vos comptes." />
         <meta name="keywords" content="générateur de mots de passe, mots de passe sécurisés, sécurité en ligne" />
         <meta name="author" content="Votre Nom" />
-        <meta property="og:title" content="Pashword - Générateur de mots de passe" />
-        <meta property="og:description" content="Pashword est un générateur de mots de passe sécurisés qui crée des mots de passe complexes pour protéger vos comptes." />
+        <meta property="og:title" content="mdp - Générateur de mots de passe" />
+        <meta property="og:description" content="mdp est un générateur de mots de passe sécurisés qui crée des mots de passe complexes pour protéger vos comptes." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://votresiteweb.com" />
         <meta property="og:image" content="https://votresiteweb.com/og-image.jpg" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Pashword - Générateur de mots de passe" />
-        <meta name="twitter:description" content="Pashword est un générateur de mots de passe sécurisés qui crée des mots de passe complexes pour protéger vos comptes." />
+        <meta name="twitter:title" content="mdp - Générateur de mots de passe" />
+        <meta name="twitter:description" content="mdp est un générateur de mots de passe sécurisés qui crée des mots de passe complexes pour protéger vos comptes." />
         <meta name="twitter:image" content="https://votresiteweb.com/twitter-image.jpg" />
       </Helmet>
       <div className="relative z-10">
