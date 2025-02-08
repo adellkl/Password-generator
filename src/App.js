@@ -1,4 +1,3 @@
-// src/App.js
 import React, { useState } from 'react';
 import './App.css';
 import { FaCopy } from 'react-icons/fa';
@@ -33,7 +32,7 @@ function App() {
       }
       setMotDePasse(nouveauMotDePasse);
       setChargement(false);
-    }, 2000); 
+    }, 2000);
   };
 
   const copierDansLePressePapier = () => {
@@ -41,76 +40,58 @@ function App() {
     alert('Mot de passe copié dans le presse-papier');
   };
 
-
-
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center relative">
+    <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-purple-900 to-black text-white p-6">
       <Helmet>
-        <title>mdp - Générateur de mots de passe</title>
-        <meta name="description" content="mdp est un générateur de mots de passe sécurisés qui crée des mots de passe complexes pour protéger vos comptes." />
-        <meta name="keywords" content="générateur de mots de passe, mots de passe sécurisés, sécurité en ligne" />
-        <meta name="author" content="Votre Nom" />
-        <meta property="og:title" content="mdp - Générateur de mots de passe" />
-        <meta property="og:description" content="mdp est un générateur de mots de passe sécurisés qui crée des mots de passe complexes pour protéger vos comptes." />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://votresiteweb.com" />
-        <meta property="og:image" content="https://votresiteweb.com/og-image.jpg" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="mdp - Générateur de mots de passe" />
-        <meta name="twitter:description" content="mdp est un générateur de mots de passe sécurisés qui crée des mots de passe complexes pour protéger vos comptes." />
-        <meta name="twitter:image" content="https://votresiteweb.com/twitter-image.jpg" />
+        <title>MDP - Générateur de mots de passe</title>
       </Helmet>
-      <div className="relative z-10">
-        <h1 className="text-5xl font-bold text-white mb-8 ">-- MDP --</h1>
-        <div className="bg-white p-8 rounded-lg shadow-md w-96">
-          <div className="mb-4">
-            <label className="block text-gray-700">Site web</label>
-            <input type="text" className="mt-1 p-2 w-full border rounded" placeholder="Exemple : nike.com" />
-          </div>
-          <div className="mb-4">
-            <label className="block text-gray-700">Nom d'utilisateur</label>
-            <input type="text" className="mt-1 p-2 w-full border rounded" placeholder="Exemple : adel_loukal" />
-          </div>
-          <div className="mb-4">
-            <label className="block text-gray-700">Clé secrète</label>
-            <input type="password" className="mt-1 p-2 w-full border rounded" placeholder="Exemple : Adelbg9210$" />
-          </div>
-          <div className="mb-4">
-            <label className="block text-gray-700">Complexité du mot de passe</label>
-            <select
-              className="mt-1 p-2 w-full border rounded"
-              value={complexite}
-              onChange={(e) => setComplexite(e.target.value)}
-            >
-              <option value="petit">Petit</option>
-              <option value="moyen">Moyen</option>
-              <option value="long">Long</option>
-            </select>
-          </div>
-          <button 
-            onClick={genererMotDePasse}
-            className="w-full bg-purple-600 text-white p-2 rounded hover:bg-purple-700 transition duration-300"
-          >
-            Générer le mot de passe 😎
-          </button>
-          {chargement ? (
-            <div className="mt-4 text-center">
-              <div className="spinner  ml-36 mt-4"></div>
-            </div>
-          ) : (
-            motDePasse && (
-              <div className="mt-8 bg-gray-100 p-2 rounded flex items-center justify-between">
-                <p className="text-gray-700 font-mono text-lg">{motDePasse}</p>
-                <button 
-                  onClick={copierDansLePressePapier}
-                  className="text-gray-500 hover:text-gray-700 transition duration-300"
-                >
-                  <FaCopy />
-                </button>
-              </div>
-            )
-          )}
+      <div className="bg-white text-gray-900 p-8 rounded-lg shadow-lg w-full max-w-md">
+        <h1 className="text-4xl font-bold text-center text-purple-700 mb-6">MDP - Générateur</h1>
+        <div className="mb-4">
+          <label className="block text-gray-700">Site web</label>
+          <input type="text" className="mt-1 p-2 w-full border rounded" placeholder="Exemple : nike.com" />
         </div>
+        <div className="mb-4">
+          <label className="block text-gray-700">Nom d'utilisateur</label>
+          <input type="text" className="mt-1 p-2 w-full border rounded" placeholder="Exemple : adel_loukal" />
+        </div>
+        <div className="mb-4">
+          <label className="block text-gray-700">Clé secrète</label>
+          <input type="password" className="mt-1 p-2 w-full border rounded" placeholder="Exemple : Adelbg9210$" />
+        </div>
+        <div className="mb-4">
+          <label className="block text-gray-700">Complexité du mot de passe</label>
+          <select
+            className="mt-1 p-2 w-full border rounded bg-gray-100"
+            value={complexite}
+            onChange={(e) => setComplexite(e.target.value)}
+          >
+            <option value="petit">Petit</option>
+            <option value="moyen">Moyen</option>
+            <option value="long">Long</option>
+          </select>
+        </div>
+        <button
+          onClick={genererMotDePasse}
+          className="w-full bg-purple-600 text-white p-2 rounded hover:bg-purple-700 transition duration-300"
+        >
+          Générer le mot de passe 😎
+        </button>
+        {chargement ? (
+          <div className="mt-4 text-center text-purple-700 font-bold">Chargement...</div>
+        ) : (
+          motDePasse && (
+            <div className="mt-6 bg-gray-200 p-3 rounded flex items-center justify-between">
+              <p className="text-gray-900 font-mono text-lg break-all">{motDePasse}</p>
+              <button
+                onClick={copierDansLePressePapier}
+                className="text-gray-500 hover:text-gray-700 transition duration-300"
+              >
+                <FaCopy />
+              </button>
+            </div>
+          )
+        )}
       </div>
     </div>
   );
