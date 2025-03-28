@@ -186,7 +186,7 @@ function App() {
         <section id="home" className="min-h-screen flex flex-col items-center justify-center py-8 sm:py-20">
           <div className="glass-effect p-4 sm:p-8 rounded-2xl shadow-2xl w-full max-w-md transform transition-all duration-300 hover:scale-[1.02] mb-8 sm:mb-12">
             <h1 className="text-3xl sm:text-4xl font-bold text-center text-white mb-6 sm:mb-8 flex items-center justify-center gap-2 fade-in-up">
-              <FaShieldAlt className="text-2xl sm:text-3xl animate-bounce text-purple-400" />
+              <FaShieldAlt className="text-2xl sm:text-3xl text-purple-400" />
               {t.generator.title}
             </h1>
             <div className="space-y-4 sm:space-y-6">
