@@ -574,7 +574,7 @@ function App() {
                 className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-emerald-500 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-lg hover:from-purple-600 hover:to-emerald-600 transition-all duration-300 transform hover:scale-[1.02] active:scale-[0.98] font-medium shadow-lg hover:shadow-xl text-sm sm:text-base"
               >
                 <FaCode className="text-lg sm:text-xl" />
-                Contribuer au projet
+                Contribuer au projet sur GitHub
               </a>
             </div>
           </div>
