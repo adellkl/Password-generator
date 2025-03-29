@@ -8,6 +8,10 @@ const translations = {
             faq: 'FAQ',
             about: 'À propos'
         },
+        buttons: {
+            contribute: 'Contribuer au projet sur GitHub',
+            install: 'Installer l\'application'
+        },
         generator: {
             title: 'PSWD - Générateur',
             website: 'Site Web',
@@ -147,6 +151,10 @@ const translations = {
             features: 'Features',
             faq: 'FAQ',
             about: 'About'
+        },
+        buttons: {
+            contribute: 'Contribute to the project on GitHub',
+            install: 'Install App'
         },
         generator: {
             title: 'PSWD - Generator',

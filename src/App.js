@@ -4,15 +4,17 @@ import {
   FaCopy, FaGlobe, FaUser, FaKey, FaShieldAlt, FaLock,
   FaDesktop, FaCode, FaHome, FaQuestionCircle,
   FaInfoCircle, FaTools, FaChevronRight, FaRocket, FaUserShield,
-  FaLanguage, FaTrash, FaHistory
+  FaLanguage, FaTrash, FaHistory, FaDownload
 } from 'react-icons/fa';
 import { Helmet } from 'react-helmet';
 import useTranslation from './hooks/useTranslation';
 import usePasswordGenerator from './hooks/usePasswordGenerator';
+import usePWAInstall from './hooks/usePWAInstall';
 import ProgressBar from './components/ProgressBar';
 
 function App() {
   const { t, language, toggleLanguage } = useTranslation();
+  const { isInstallable, install } = usePWAInstall();
   const [website, setWebsite] = useState('');
   const [username, setUsername] = useState('');
   const [secretKey, setSecretKey] = useState('');
@@ -566,7 +568,7 @@ function App() {
             </div>
 
             {/* Call to Action */}
-            <div className="mt-8 sm:mt-12 text-center">
+            <div className="mt-8 sm:mt-12 text-center flex flex-col sm:flex-row items-center justify-center gap-4">
               <a
                 href="https://github.com/adellkl/Password-generator"
                 target="_blank"
@@ -574,8 +576,15 @@ function App() {
                 className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-emerald-500 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-lg hover:from-purple-600 hover:to-emerald-600 transition-all duration-300 transform hover:scale-[1.02] active:scale-[0.98] font-medium shadow-lg hover:shadow-xl text-sm sm:text-base"
               >
                 <FaCode className="text-lg sm:text-xl" />
-                Contribuer au projet sur GitHub
+                {t.buttons.contribute}
               </a>
+              <button
+                onClick={install}
+                className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-500 to-purple-500 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-lg hover:from-blue-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-[1.02] active:scale-[0.98] font-medium shadow-lg hover:shadow-xl text-sm sm:text-base"
+              >
+                <FaDownload className="text-lg sm:text-xl" />
+                {t.buttons.install}
+              </button>
             </div>
           </div>
         </section>
